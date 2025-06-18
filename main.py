@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 from stats import (chars_dict_to_sorted_list, count_chars, count_words,
                    get_book_report)
+=======
+import sys
+
+from stats import count_words, get_num_times_per_char
+>>>>>>> 6f10e75 (added sys.argv to read book path)
 
 
 def main():
-    book_path = "./books/frankenstein.txt"
+    args = sys.argv
+    if len(args) != 2:
+        print("  Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    book_path = args[1]
     book_content = get_book_text(book_path)
 
     num_words = count_words(book_content)
