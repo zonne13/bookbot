@@ -1,4 +1,5 @@
-from stats import count_words, get_num_times_per_char
+from stats import (chars_dict_to_sorted_list, count_chars, count_words,
+                   get_book_report)
 
 
 def main():
@@ -6,11 +7,12 @@ def main():
     book_content = get_book_text(book_path)
 
     num_words = count_words(book_content)
-    char_counts = get_num_times_per_char(book_content)
+    char_counts = chars_dict_to_sorted_list(count_chars(book_content))
 
-    msg = f"{num_words} words found in the document"
+    msg = get_book_report(
+        book_path=book_path, word_count=num_words, char_count_list=char_counts
+    )
     print(msg)
-    print(char_counts)
 
 
 def get_book_text(file_path: str):
