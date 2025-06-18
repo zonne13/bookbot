@@ -8,6 +8,7 @@ def chars_dict_to_sorted_list(chars: dict):
     Returns:
         Sorted list of char dict {"char": char, "num": count}
     """
+
     def sort_on(dict):
         return dict["num"]
 
@@ -21,7 +22,7 @@ def get_book_report(book_path: str, word_count: int, char_count_list: list) -> s
     Generates a report string with the total word count and a sorted list of characters and their count.
     """
     report = "============ BOOKBOT ============\n"
-    report += f"Analyzing book found at {book_path[2:]}...\n"
+    report += f"Analyzing book found at {book_path}...\n"
     report += "----------- Word Count ----------\n"
     report += f"Found {word_count} total words\n"
     report += "--------- Character Count -------\n"

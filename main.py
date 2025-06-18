@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-from stats import (chars_dict_to_sorted_list, count_chars, count_words,
-                   get_book_report)
-=======
 import sys
 
-from stats import count_words, get_num_times_per_char
->>>>>>> 6f10e75 (added sys.argv to read book path)
+from stats import chars_dict_to_sorted_list, count_chars, count_words, get_book_report
 
 
 def main():
